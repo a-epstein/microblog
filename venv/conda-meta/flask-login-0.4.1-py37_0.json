@@ -1,0 +1,221 @@
+{
+  "build": "py37_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "flask",
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "//miniconda3/pkgs/flask-login-0.4.1-py37_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/not-zip-safe",
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/requires.txt",
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/version_info.json",
+    "lib/python3.7/site-packages/flask_login/__about__.py",
+    "lib/python3.7/site-packages/flask_login/__init__.py",
+    "lib/python3.7/site-packages/flask_login/__pycache__/__about__.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/_compat.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/config.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/login_manager.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/mixins.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/signals.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/__pycache__/utils.cpython-37.pyc",
+    "lib/python3.7/site-packages/flask_login/_compat.py",
+    "lib/python3.7/site-packages/flask_login/config.py",
+    "lib/python3.7/site-packages/flask_login/login_manager.py",
+    "lib/python3.7/site-packages/flask_login/mixins.py",
+    "lib/python3.7/site-packages/flask_login/signals.py",
+    "lib/python3.7/site-packages/flask_login/utils.py"
+  ],
+  "fn": "flask-login-0.4.1-py37_0.conda",
+  "legacy_bz2_md5": "a88d899b287fe951d3d6b97fab930ffe",
+  "license": "MIT",
+  "link": {
+    "source": "//miniconda3/pkgs/flask-login-0.4.1-py37_0",
+    "type": 1
+  },
+  "md5": "7ba63dd3286bf2e64e158bdb41319ffb",
+  "name": "flask-login",
+  "package_tarball_full_path": "//miniconda3/pkgs/flask-login-0.4.1-py37_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "7325aa459c21a98345fd2ee55034cf29fec1d9c5c86fa4eff15a45b2c8a73bee",
+        "sha256_in_prefix": "7325aa459c21a98345fd2ee55034cf29fec1d9c5c86fa4eff15a45b2c8a73bee",
+        "size_in_bytes": 1888
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "02b44d6dc095c70974ddb43b2a1aa4da293fe82e0b5fb4d7f1cf50f51d490310",
+        "sha256_in_prefix": "02b44d6dc095c70974ddb43b2a1aa4da293fe82e0b5fb4d7f1cf50f51d490310",
+        "size_in_bytes": 484
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "2a1a661c4e3e6faadab5d001bc10cc3acccf648921aad7c279d94f138eaaf833",
+        "sha256_in_prefix": "2a1a661c4e3e6faadab5d001bc10cc3acccf648921aad7c279d94f138eaaf833",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "3ae5e62298859d72ef5be8816d6da49bb648cb9119bf04819d868e0b72adee3f",
+        "sha256_in_prefix": "3ae5e62298859d72ef5be8816d6da49bb648cb9119bf04819d868e0b72adee3f",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Flask_Login-0.4.1-py3.7.egg-info/version_info.json",
+        "path_type": "hardlink",
+        "sha256": "68c6e391eeab22a1b6cf48c4c1336facb32ea365a6a789acc1dce6fd63a7d5d1",
+        "sha256_in_prefix": "68c6e391eeab22a1b6cf48c4c1336facb32ea365a6a789acc1dce6fd63a7d5d1",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__about__.py",
+        "path_type": "hardlink",
+        "sha256": "d617b05351e4168fb8137310935d54ab370bdee891f5c862f6ae25767cb03c71",
+        "sha256_in_prefix": "d617b05351e4168fb8137310935d54ab370bdee891f5c862f6ae25767cb03c71",
+        "size_in_bytes": 389
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2cd9f80e5fadb3d29ed69570b9e39de38a1a5103b03e8bbf51c324a36d492c49",
+        "sha256_in_prefix": "2cd9f80e5fadb3d29ed69570b9e39de38a1a5103b03e8bbf51c324a36d492c49",
+        "size_in_bytes": 2103
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/__about__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e221424e2cb3e91a5e63db4bbf6e3252217cd8ebedad9e508519c7c9aebd969",
+        "sha256_in_prefix": "9e221424e2cb3e91a5e63db4bbf6e3252217cd8ebedad9e508519c7c9aebd969",
+        "size_in_bytes": 548
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "bcd40bb527009f86f80e9526928b53da463eb18c6b7e85e9afece8941f8e9ba2",
+        "sha256_in_prefix": "bcd40bb527009f86f80e9526928b53da463eb18c6b7e85e9afece8941f8e9ba2",
+        "size_in_bytes": 1829
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/_compat.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "99199750655c98feaccd15359eb2f186881a7a246a92b08066ff15a903758ab9",
+        "sha256_in_prefix": "99199750655c98feaccd15359eb2f186881a7a246a92b08066ff15a903758ab9",
+        "size_in_bytes": 950
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/config.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f1b0e4eba7282e33553c2d69ce1b6187a7e29236e5e07655b3efaad467310a0",
+        "sha256_in_prefix": "3f1b0e4eba7282e33553c2d69ce1b6187a7e29236e5e07655b3efaad467310a0",
+        "size_in_bytes": 823
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/login_manager.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "53ddb75e3fee3b1f46c8780446b88146d591ec4ef6aa25ff8b0889f87ec14b1f",
+        "sha256_in_prefix": "53ddb75e3fee3b1f46c8780446b88146d591ec4ef6aa25ff8b0889f87ec14b1f",
+        "size_in_bytes": 14007
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/mixins.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "79c6bc8eaac7e451183c0e2dbf19256a77986db2b2d3aebf1ed4cc72d3abba1a",
+        "sha256_in_prefix": "79c6bc8eaac7e451183c0e2dbf19256a77986db2b2d3aebf1ed4cc72d3abba1a",
+        "size_in_bytes": 2501
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/signals.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "9197aa7f755f4033bc94f3948cc34d8a3a45eab49414d9370f6159c15e42ce4e",
+        "sha256_in_prefix": "9197aa7f755f4033bc94f3948cc34d8a3a45eab49414d9370f6159c15e42ce4e",
+        "size_in_bytes": 855
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/__pycache__/utils.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "c76550b5229073c6d0cf8a41a4ccd9e6460218fc82612869810b53484030528a",
+        "sha256_in_prefix": "c76550b5229073c6d0cf8a41a4ccd9e6460218fc82612869810b53484030528a",
+        "size_in_bytes": 11875
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/_compat.py",
+        "path_type": "hardlink",
+        "sha256": "449f80f0d09a74136f547fdf4eafe435f7ea65dc0d848e6706078da561f95932",
+        "sha256_in_prefix": "449f80f0d09a74136f547fdf4eafe435f7ea65dc0d848e6706078da561f95932",
+        "size_in_bytes": 813
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/config.py",
+        "path_type": "hardlink",
+        "sha256": "15fe4f87b19d0ed4740c7045024debfecb17543468df20b0d21eeeee81ec43c8",
+        "sha256_in_prefix": "15fe4f87b19d0ed4740c7045024debfecb17543468df20b0d21eeeee81ec43c8",
+        "size_in_bytes": 1812
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/login_manager.py",
+        "path_type": "hardlink",
+        "sha256": "ec4f0003dc6c45dfbb3b1fcf0c8c9b16928f1fe0c0029208921853afc133e9d9",
+        "sha256_in_prefix": "ec4f0003dc6c45dfbb3b1fcf0c8c9b16928f1fe0c0029208921853afc133e9d9",
+        "size_in_bytes": 18740
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/mixins.py",
+        "path_type": "hardlink",
+        "sha256": "487c8c1b4d6aeea93df26652babc3521fe7d40b62999a246983aefa41c770b1e",
+        "sha256_in_prefix": "487c8c1b4d6aeea93df26652babc3521fe7d40b62999a246983aefa41c770b1e",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/signals.py",
+        "path_type": "hardlink",
+        "sha256": "ed7f94792c7a8ae23aad098b115db427370d8b7ffbcd9fe4605042731ec3bf39",
+        "sha256_in_prefix": "ed7f94792c7a8ae23aad098b115db427370d8b7ffbcd9fe4605042731ec3bf39",
+        "size_in_bytes": 2223
+      },
+      {
+        "_path": "lib/python3.7/site-packages/flask_login/utils.py",
+        "path_type": "hardlink",
+        "sha256": "c3c371b01a0820cf38f7c83563f7f14843f3d4a831a1b7daf186d1c9ab035751",
+        "sha256_in_prefix": "c3c371b01a0820cf38f7c83563f7f14843f3d4a831a1b7daf186d1c9ab035751",
+        "size_in_bytes": 12966
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "flask-login",
+  "sha256": "7d55bee3372f3f002b201766ced3c3a0922d96bbf0afc7968783bad2acad53e7",
+  "size": 25230,
+  "subdir": "osx-64",
+  "timestamp": 1530852912853,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/flask-login-0.4.1-py37_0.conda",
+  "version": "0.4.1"
+}

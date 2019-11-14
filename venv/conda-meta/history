@@ -74,3 +74,14 @@
 +conda-forge::python-editor-1.0.4-py_0
 +conda-forge::six-1.13.0-py37_0
 # update specs: ['flask-migrate']
+==> 2019-11-14 12:16:39 <==
+# cmd: //miniconda3/bin/conda install flask-login
+# conda version: 4.7.12
+-conda-forge::ca-certificates-2019.9.11-hecc5488_0
+-conda-forge::certifi-2019.9.11-py37_0
+-conda-forge::openssl-1.1.1d-h0b31af3_0
++defaults::ca-certificates-2019.10.16-0
++defaults::certifi-2019.9.11-py37_0
++defaults::flask-login-0.4.1-py37_0
++defaults::openssl-1.1.1d-h1de35cc_3
+# update specs: ['flask-login']

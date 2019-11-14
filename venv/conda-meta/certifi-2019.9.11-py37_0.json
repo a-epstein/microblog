@@ -1,7 +1,7 @@
 {
   "build": "py37_0",
   "build_number": 0,
-  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
   "constrains": [],
   "depends": [
     "python >=3.7,<3.8.0a0"
@@ -29,7 +29,7 @@
     "source": "//miniconda3/pkgs/certifi-2019.9.11-py37_0",
     "type": 1
   },
-  "md5": "ceafb7aa93dabc97b13bc51ec067f8e0",
+  "md5": "5c7a70a6c3e16e5b304dc22266546ff8",
   "name": "certifi",
   "package_tarball_full_path": "//miniconda3/pkgs/certifi-2019.9.11-py37_0.tar.bz2",
   "paths_data": {
@@ -129,11 +129,11 @@
     "paths_version": 1
   },
   "requested_spec": "None",
-  "sha256": "a9a7ccece9d97ce59ffea88909508812efe604194a4d0be00fc54ec33579e195",
-  "size": 150689,
+  "sha256": "3a1a49593de3219d3ae02fe89fdf48fc5ef11db7d646f4cc2e2a43ba6ba2bf25",
+  "size": 157763,
   "subdir": "osx-64",
-  "timestamp": 1568237740617,
+  "timestamp": 1569254394848,
   "track_features": "",
-  "url": "https://conda.anaconda.org/conda-forge/osx-64/certifi-2019.9.11-py37_0.tar.bz2",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/certifi-2019.9.11-py37_0.tar.bz2",
   "version": "2019.9.11"
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/Users/amanda/dev/microblog/venv/bin/perl
 # Copyright 2002-2018 The OpenSSL Project Authors. All Rights Reserved.
 # Copyright (c) 2002 The OpenTSA Project. All rights reserved.
 #

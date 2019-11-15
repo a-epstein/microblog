@@ -15,7 +15,6 @@ def index():
     :return: render template with our HTML
     :rtype: render_template
     """
-    user = {'username': 'Amanda'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -26,7 +25,7 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    return render_template('index.html', title='Home', posts=posts)
 
 
 # route to login page

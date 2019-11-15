@@ -1,13 +1,15 @@
-from flask import render_template, flash, redirect, url_for
-from flask_login import current_user, login_user, logout_user
+from flask import render_template, flash, redirect, url_for, request
+from flask_login import current_user, login_user, logout_user, login_required
 from app import app
 from app.forms import LoginForm
 from app.models import User
+from werkzeug.urls import url_parse
 
 
 # route to index
 @app.route('/')
 @app.route('/index')
+@login_required
 def index():
     """
     :return: render template with our HTML
@@ -46,11 +48,18 @@ def login():
             return redirect(url_for('login'))
         # if username and password check succeeds, login user (set user to current_user)
         login_user(user, remember=form.remember_me.data)
-        # then redirect to index
-        return redirect(url_for('index'))
+        # after user is logged in, determine which page to pass them to
+        next_page = request.args.get('next')
+        # if there is no next_page, user is redirected to index
+        # url_parse checks that next_page is a relative location and not an absolute path
+        # this prevents attackers from inserting a foreign URL
+        if not next_page or url_parse(next_page).netloc != '':
+            next_page = url_for('index')
+        # redirect user to next_page based on above logic
+        return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
-
+# route to logout page
 @app.route('/logout')
 def logout():
     logout_user()

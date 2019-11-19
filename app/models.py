@@ -2,6 +2,7 @@ from datetime import datetime
 from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
+from hashlib import md5
 
 
 class User(UserMixin, db.Model):
@@ -20,6 +21,12 @@ class User(UserMixin, db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
+    def avatar(self, size):
+        # md5 works on bytes, not strings, so we encode it to bytes
+        digest = md5(self.email.lower().encode('utf-8')).hexdigest()
+        # returns gravatar URL with size passed to it
+        # users that don't have a registered gravatar will have an identicon generated
+        return 'http://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
 
 @login.user_loader
 def load_user(id):

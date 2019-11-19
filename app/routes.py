@@ -4,6 +4,7 @@ from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from werkzeug.urls import url_parse
+from datetime import datetime
 
 
 # route to index
@@ -93,3 +94,12 @@ def user(username):
         {'author': user, 'body': 'Text post #2'}
     ]
     return render_template('user.html', user=user, posts=posts)
+
+# this decorator can be used on any function we want to run before the view function
+@app.before_request
+def before_request():
+    # when you reference current_user, Flask-Login invokes user loader that runs database query
+    # so there will already be a db session running
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()

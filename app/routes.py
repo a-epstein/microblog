@@ -58,11 +58,13 @@ def login():
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
+
 # route to logout page
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
 
 # Route to registration page
 @app.route('/register', methods=['GET', 'POST'])
@@ -79,6 +81,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
+
 # add view function for user profile pages
 # the view function has a dynamic component as denoted by <username> so that Flask can fill in with logged in user
 @app.route('/user/<username>')
@@ -89,4 +92,4 @@ def user(username):
         {'author': user, 'body': 'Text post #1'},
         {'author': user, 'body': 'Text post #2'}
     ]
-    return render_template('user.html',user=user, posts=posts)
+    return render_template('user.html', user=user, posts=posts)

@@ -3,8 +3,8 @@ A new module to store my web form classes
 """
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import DataRequired, ValidationError, Email, EqualTo
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
+from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length
 from app.models import User
 
 
@@ -33,3 +33,14 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError("Please use a different email")
+
+
+class EditProfileForm(FlaskForm):
+    """
+    A form that allows the user to change their username, and About Me section.
+    We've allocated 140 characters for the about me section in the database, so we use Length() validator to ensure
+    that this is the maximum.
+    """
+    username: StringField = StringField("Username", validators=[DataRequired()])
+    about_me = TextAreaField("About me", validators=[DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField("Submit")

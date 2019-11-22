@@ -33,6 +33,7 @@ if not app.debug:
             credentials=auth,secure=secure)
         mail_handler.setLevel(logging.ERROR)
         app.logger.addHandler(mail_handler)
+
     if not os.path.exists('logs'):
         os.mkdir('logs')
     # Use a rotating file handler to keep the past 10 files, and limit size of logs

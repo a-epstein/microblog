@@ -7,6 +7,16 @@ from werkzeug.urls import url_parse
 from datetime import datetime
 
 
+# this decorator can be used on any function we want to run before the view function
+@app.before_request
+def before_request():
+    # when you reference current_user, Flask-Login invokes user loader that runs database query
+    # so there will already be a db session running
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
+
+
 # route to index
 @app.route('/')
 @app.route('/index')
@@ -95,19 +105,11 @@ def user(username):
     ]
     return render_template('user.html', user=user, posts=posts)
 
-# this decorator can be used on any function we want to run before the view function
-@app.before_request
-def before_request():
-    # when you reference current_user, Flask-Login invokes user loader that runs database query
-    # so there will already be a db session running
-    if current_user.is_authenticated:
-        current_user.last_seen = datetime.utcnow()
-        db.session.commit()
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
-    form = EditProfileForm()
+    form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data

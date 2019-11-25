@@ -44,6 +44,21 @@ class User(UserMixin, db.Model):
         # users that don't have a registered gravatar will have an identicon generated
         return 'http://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
 
+    # Function to follow a user
+    def follow(self, user):
+        if not self.is_following(user):
+            self.followed.append(user)
+
+    # Function to unfollow a user
+    def unfollow(self, user):
+        if self.is_following(user):
+            self.followed.remove(user)
+
+    # Function to view if you are following a user
+    def is_following(self, user):
+        return self.followed.filter(
+            followers.c.followed_id == user.id).count() > 0
+
 
 @login.user_loader
 def load_user(id):

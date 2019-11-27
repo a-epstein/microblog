@@ -42,7 +42,7 @@ class User(UserMixin, db.Model):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
         # returns gravatar URL with size passed to it
         # users that don't have a registered gravatar will have an identicon generated
-        return 'http://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
+        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
 
     # Function to follow a user
     def follow(self, user):
@@ -67,7 +67,7 @@ class User(UserMixin, db.Model):
             followers,(followers.c.followed_id == Post.user_id)).filter(
                 followers.c.follower_id == self.id)
         own = Post.query.filter_by(user_id = self.id)
-        return followed.union(own).order_by(Post.timestamp.desc)
+        return followed.union(own).order_by(Post.timestamp.desc())
 
 
 @login.user_loader

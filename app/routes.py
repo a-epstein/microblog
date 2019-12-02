@@ -1,8 +1,8 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_user, logout_user, login_required
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, EditProfileForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm
+from app.models import User, Post
 from werkzeug.urls import url_parse
 from datetime import datetime
 
@@ -18,25 +18,22 @@ def before_request():
 
 
 # route to index
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    """
-    :return: render template with our HTML
-    :rtype: render_template
-    """
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html', title='Home', posts=posts)
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data,author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post has been submitted')
+        return redirect(url_for('index'))
+
+    # Uses our followed_posts() method to return a query of posts - all() triggers the execution of method
+    posts = current_user.followed_posts().all()
+
+    return render_template('index.html', title='Home', form=form, posts=posts)
 
 
 # route to login page
@@ -137,6 +134,7 @@ def follow(username):
     db.session.commit()
     flash('You are following {}'.format(username))
     return redirect(url_for('user', username=username))
+
 
 @app.route('/unfollow/<username>')
 def unfollow(username):

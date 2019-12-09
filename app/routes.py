@@ -30,10 +30,15 @@ def index():
         flash('Your post has been submitted')
         return redirect(url_for('index'))
 
-    # Uses our followed_posts() method to return a query of posts - all() triggers the execution of method
-    posts = current_user.followed_posts().all()
+    # Pagination of posts
+    page = request.args.get('page', 1, type=int)
 
-    return render_template('index.html', title='Home', form=form, posts=posts)
+    # Uses our followed_posts() method to return a query of posts - all() triggers the execution of method
+    # Using .paginate() will create a Paginate object instead of displaying all posts
+    posts = current_user.followed_posts().paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+
+    return render_template('index.html', title='Home', form=form, posts=posts.items)
 
 
 # route to login page
@@ -153,5 +158,7 @@ def unfollow(username):
 @app.route('/explore')
 @login_required
 def explore():
-    posts = Post.query.order_by(Post.timestamp.desc()).all()
-    return render_template('index.html', posts=posts)
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    return render_template('index.html', posts=posts.items)

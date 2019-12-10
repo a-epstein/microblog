@@ -5,6 +5,9 @@
       <w>endfor</w>
       <w>endwith</w>
       <w>sqlalchemy</w>
+      <w>unfollow</w>
+      <w>unfollowed</w>
+      <w>usernames</w>
     </words>
   </dictionary>
 </component>
